@@ -13,7 +13,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(../../public/images/идгк.png);
+    background-image: url(../../public/images/tavern_back.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -188,9 +188,9 @@ body{
             flex-wrap: wrap;
             
             @each $number, $picture in (1: 'character_list',
-                                        2: 'tools',
-                                        3: 'book',
-                                        4: 'for_developers') {
+                                        2: 'Master',
+                                        3: 'Reference',
+                                        4: 'Dev') {
                 & > :nth-child(#{$number}) :first-child{
                     background-image: url('../../public/images/#{$picture}.jpg');
                     background-size: cover;
