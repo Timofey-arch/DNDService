@@ -1,1 +1,267 @@
-// Здесь пока пусто, но скоро тут будет оочень много всего
+@import url('https://fonts.cdnfonts.com/css/pt-sans-caption');
+
+$cream: #D7C87C;
+$dark_green: #00383C;
+$button_color: #D9D9D9;
+$button_hover_color: #bcbcbc;
+$main_font: 'PT Sans Caption', sans-serif;
+
+
+// Desktop version of styles
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../public/images/идгк.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+}
+
+ @mixin flex-container-row{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-container-column{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin text_border($thickness) {
+    text-shadow: #{$thickness}px 0 #{$thickness}px #000, 0 #{$thickness}px #{$thickness}px #000, 
+    #{- $thickness}px 0 #{$thickness}px #000, 0 #{- $thickness}px #{$thickness}px #000;
+}
+
+@mixin center_horizontal_and_vertical{
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin text_highlighting($transition, $color, $decoration_style){
+    transition: $transition;
+    text-decoration: $decoration_style solid $color;
+    color: $color;
+}
+
+.nav_panel{
+    @include flex-container-row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #efeae7;
+    border-bottom: 2px #6f6c71 solid;
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+
+    .nav_button{
+        @include flex-container-row;
+        @include center_horizontal_and_vertical;
+        position: relative;
+        width: 10vw;
+        height: 10vh;
+        // margin: {
+        //     left: 5px;
+        //     right: 5px;
+        // } 
+        cursor: pointer;
+        color:black;
+        font-family: 'PT Sans Caption', sans-serif;
+        text-decoration: none;
+
+        .pointer{
+            display: none;
+            position: absolute;
+            left: 43%;
+            top: 100%;
+            width: 0;
+            height: 0;
+            border-top: 10px solid red;
+            border-right: 10px transparent solid;
+            border-bottom: 10px transparent solid;
+            border-left: 10px transparent solid;
+        }
+        
+        .submenu{
+            @include flex-container-column;
+            justify-content: flex-start;
+            display: none;
+            position: absolute;
+            width: 100vw;
+            height: 40vh;
+            background-color: black;
+            filter: opacity(90%);
+
+            .submenu_button{
+                margin: {
+                    left: 8.5%;
+                    bottom: 5px;
+                    top: 5px;
+                };
+                color: white;
+                font-family: $main_font;
+                font-size: 1.3em;
+                text-decoration: none;
+
+                &:hover{
+                    @include text_highlighting(100ms, red, underline);
+                }
+            }
+        }
+
+        &:hover{
+            @include text_highlighting(100ms, red, underline);
+
+            .submenu, .pointer{
+                display: flex;
+            }
+        }
+    }
+
+    ul{
+        @include flex-container-row;
+        @include center_horizontal_and_vertical;
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .logo_container{
+        @include flex-container-column;
+        @include center_horizontal_and_vertical;
+        margin: 20px;
+        color: black;
+        font-family: $main_font;
+        text-decoration: none;
+
+        .logo{
+            width: 3vw;
+            height: 3vw;
+            cursor: pointer;
+        }
+
+        .name{
+            font-family: 'PT Sans Caption', sans-serif;
+            font-size: large;
+        }
+    }
+}
+
+.main_section{
+    @include flex-container-column;
+    width: 99vw;
+    position: relative;
+    top: 80vh;
+
+    section {
+        @include flex-container-row;
+        @include center_horizontal_and_vertical;
+        width: 100%;
+        height: 90vh;
+        background-color: #cdcbca;
+        border: {
+            bottom: 3px #6f6c71 solid;
+            top: 3px #6f6c71 solid;
+        };
+
+        .icon_container{
+            @include flex-container-row;
+            width: 70vw;
+            height: 80vh;
+            flex-wrap: wrap;
+            
+            @each $number, $picture in (1: 'character_list',
+                                        2: 'tools',
+                                        3: 'book',
+                                        4: 'for_developers') {
+                & > :nth-child(#{$number}) :first-child{
+                    background-image: url('../../public/images/#{$picture}.jpg');
+                    background-size: cover;
+                }
+            }
+        }
+
+        .icon{
+            @include flex-container-row;
+            @include center_horizontal_and_vertical;
+            width: calc(50% - 30px);
+            height: calc(50% - 30px);
+            margin: 10px;
+            border: {
+                left: 5px rgb(49, 49, 49) solid;
+                bottom: 5px rgb(49, 49, 49) solid;
+                top: 5px rgb(17, 17, 17) solid;
+                right: 5px rgb(17, 17, 17) solid
+            };
+            position: relative;
+            cursor: pointer;
+
+            // Вынести повторения в переменные 
+            h2 {
+                font-family: $main_font;
+                position: absolute;
+                bottom: 0;
+                left: 10px;
+                color: white;
+                font-size: 1.8rem;
+                @include text_border(1);
+            }
+
+            p{
+                display: none;
+                color: white;
+                font-family: $main_font;
+                font-size: 1.5em;
+                padding: 20px;
+                @include text_border(1);
+            }
+
+            .picture{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
+            &:hover{
+                scale: (1.02);
+                transition: 500ms;
+
+                p{
+                    z-index: 1;
+                    display: flex;
+                }
+
+                .picture{
+                    transition: 200ms;
+                    filter: brightness(30%);
+                }
+            }
+        }
+    }
+
+    > h2{
+        position: absolute;
+        font-family: $main_font;
+        color: white;
+        @include text_border(2);
+        top:-50vh;
+        left: 25%;
+        font-size: 5em;
+    }
+}
+
+
+.footer{
+    background-color: #6f6c71;
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    top: 80vh;
+}
+

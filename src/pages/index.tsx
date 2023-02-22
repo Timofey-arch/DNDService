@@ -1,9 +1,14 @@
-import React from "react"
+import React from "react";
+import NavPanel from "components/Desktop/NavPanel";
+import MainSection from "components/Desktop/MainSection";
+import Footer from "components/Desktop/Footer";
 
 export default function Home() {
   return (
     <>
-     <h1>Lets start</h1>
+      <NavPanel></NavPanel>
+      <MainSection></MainSection>
+      <Footer></Footer>
     </>
-  )
+  );
 }
