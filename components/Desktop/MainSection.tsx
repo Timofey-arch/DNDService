@@ -1,7 +1,7 @@
 export default function MainSection(props: any){
     return(
         <main className="main_section">
-            <h2>Добро пожаловать!</h2>
+            <h1>Добро пожаловать!</h1>
             <section>
                 <div className="picture"></div>
                 

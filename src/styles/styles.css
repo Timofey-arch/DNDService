@@ -109,6 +109,18 @@ body {
   height: 3vw;
   cursor: pointer;
 }
+.nav_panel .logo_container .logo:hover {
+  animation: roll 4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-delay: 100ms;
+}
+@keyframes roll {
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 .nav_panel .logo_container .name {
   font-family: "PT Sans Caption", sans-serif;
   font-size: large;
@@ -194,17 +206,20 @@ body {
 }
 .main_section section .icon:hover {
   scale: 1.02;
-  transition: 500ms;
+  transition: 100ms;
 }
 .main_section section .icon:hover p {
   z-index: 1;
-  display: flex;
+  display: block;
 }
 .main_section section .icon:hover .picture {
-  transition: 200ms;
   filter: brightness(30%);
+  scale: -3.98px;
 }
-.main_section > h2 {
+.main_section section .icon:hover h2 {
+  scale: -3.98px;
+}
+.main_section > h1 {
   position: absolute;
   font-family: "PT Sans Caption", sans-serif;
   color: white;

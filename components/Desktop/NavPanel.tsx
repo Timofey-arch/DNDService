@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import Logo from '../../public/images/Logo.png';
+import Logo2 from '../../public/images/Logo2.png';
 
 export default function NavPanel(props: any){
     return(
         <nav className="nav_panel">
             <ul> 
                 <Link className="logo_container" href='/'>
-                    <Image className="logo" alt="Logo" src={Logo}></Image>
+                    <Image className="logo" alt="Logo" src={Logo2}></Image>
                     <div className="name">Tavern</div>
                 </Link>
 
@@ -22,7 +23,7 @@ export default function NavPanel(props: any){
 
                     <div className="pointer"></div>
                 </Link>
-                
+
                 <Link href='/' className="nav_button">
                     Для игрока
 

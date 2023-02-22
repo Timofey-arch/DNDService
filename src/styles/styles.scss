@@ -67,10 +67,6 @@ body{
         position: relative;
         width: 10vw;
         height: 10vh;
-        // margin: {
-        //     left: 5px;
-        //     right: 5px;
-        // } 
         cursor: pointer;
         color:black;
         font-family: 'PT Sans Caption', sans-serif;
@@ -144,6 +140,21 @@ body{
             width: 3vw;
             height: 3vw;
             cursor: pointer;
+
+            &:hover{
+                animation: roll 4s cubic-bezier(0.075, 0.82, 0.165, 1);
+                animation-delay: 100ms;
+            }
+
+            @keyframes roll {
+                50%{
+                    transform: rotate(360deg);
+                }
+
+                100%{
+                    transform: rotate(0deg);
+                }
+            }
         }
 
         .name{
@@ -202,7 +213,6 @@ body{
             position: relative;
             cursor: pointer;
 
-            // Вынести повторения в переменные 
             h2 {
                 font-family: $main_font;
                 position: absolute;
@@ -230,22 +240,26 @@ body{
 
             &:hover{
                 scale: (1.02);
-                transition: 500ms;
+                transition: 100ms;
 
                 p{
                     z-index: 1;
-                    display: flex;
+                    display: block;
                 }
 
                 .picture{
-                    transition: 200ms;
                     filter: brightness(30%);
+                    scale: (1.02 - 5px);
+                }
+
+                h2 {
+                    scale: (1.02 - 5px);
                 }
             }
         }
     }
 
-    > h2{
+    > h1{
         position: absolute;
         font-family: $main_font;
         color: white;
