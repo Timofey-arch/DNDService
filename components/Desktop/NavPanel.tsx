@@ -14,11 +14,8 @@ export default function NavPanel(props: any){
 
                 <Link href='/' className="nav_button">
                     Для мастера
-                    <div className="submenu" style={{ "left" : "-7vw", "top": "10vh"}}>
-                        {/* <Link href="/" className="submenu_button">Aboba1</Link>
-                        <Link href="/" className="submenu_button">Aboba2</Link>
-                        <Link href="/" className="submenu_button">Aboba3</Link>
-                        <Link href="/" className="submenu_button">Aboba4</Link> */}
+                    <div className="submenu" 
+                        style={{ "left" : "calc(-5vw - 2.4vw)", "top": "10vh"}}>
                     </div>
 
                     <div className="pointer"></div>
@@ -27,11 +24,8 @@ export default function NavPanel(props: any){
                 <Link href='/' className="nav_button">
                     Для игрока
 
-                    <div className="submenu" style={{ "left" : "-17vw", "top": "10vh"}}>
-                        {/* <Link href="/" className="submenu_button">Aboba1</Link>
-                        <Link href="/" className="submenu_button">Aboba2</Link>
-                        <Link href="/" className="submenu_button">Aboba3</Link>
-                        <Link href="/" className="submenu_button">Aboba4</Link> */}
+                    <div className="submenu" 
+                        style={{ "left" : "calc(-5vw - 2.4vw - 10vw)", "top": "10vh"}}>
                     </div>
 
                     <div className="pointer"></div>
@@ -40,11 +34,8 @@ export default function NavPanel(props: any){
                 <Link href='/' className="nav_button">
                     Справочник
 
-                    <div className="submenu" style={{ "left" : "-27vw", "top": "10vh"}}>
-                        {/* <Link href="/" className="submenu_button">Aboba1</Link>
-                        <Link href="/" className="submenu_button">Aboba2</Link>
-                        <Link href="/" className="submenu_button">Aboba3</Link>
-                        <Link href="/" className="submenu_button">Aboba4</Link> */}
+                    <div className="submenu" 
+                        style={{ "left" : "calc(-5vw - 2.4vw - 20vw)", "top": "10vh"}}>
                     </div>
 
                     <div className="pointer"></div>

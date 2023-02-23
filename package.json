@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "sass": "sass --watch --sourcemap=none src/styles/styles.scss src/styles/styles.css",
+    "sass": "sass --watch --no-source-map  src/styles/styles.scss src/styles/styles.css",
     "install_all_packages": "npm install"
   },
   "dependencies": {
