@@ -1,25 +1,40 @@
 import Image from "next/image";
-import VK from '../../public/images/VK.png';
-import tel from '../../public/images/tel.png';
-import Logo2 from "../../public/images/Logo2.png";
+import VKPicture from '../../public/images/VK.png';
+import TelegramPicture from '../../public/images/tel.png';
+import Link from "next/link";
 
 export default function Footer(props: any){
     return(
-        <>
-            <footer className="footer">
-                <div className={"info indent-left"}>
-                    <h4>© 2023-2023 web-application “D&DTavern”</h4>
+        <footer className="footer">
+            <div className="info_column">
+                <h4>Контакты</h4>
+                <h5>Наши соцальные сети</h5>
+
+                <div className="social_network_container">
+                    <Link href="https://vk.com">
+                        <Image alt="VK" src={VKPicture} className="social_network_picture"></Image>
+                    </Link>
+
+                    <Link href="https://web.telegram.org">
+                        <Image alt="Telegram" src={TelegramPicture} className="social_network_picture"></Image>
+                    </Link>
                 </div>
-                <div className={"info indent-left"}>
-                    <h4>Появились идеи? Свяжитесь с нами!</h4>
-                    <h4 className={"p"}>Наши социальные сети</h4>
-                </div>
-                <div className={"social-picture-container indent-left"}>
-                    <div><a href="https://vk.com"><Image className="picture" alt="VK" src={VK}></Image></a></div>
-                    <div>ㅤ</div>
-                    <div><a href="https://web.telegram.org"><Image className="picture" alt="tel" src={tel}></Image></a></div>
-                </div>
-            </footer>
-        </>
+            </div>
+
+            <div className="info_column">
+                <h4>Что-нибудь еще</h4>
+                <h5>Текст-рыба</h5>
+            </div>
+
+            <div className="info_column">
+                <h4>Что-нибудь еще</h4>
+                <h5>Текст-рыба</h5>
+            </div>
+
+            <div className="info_column">
+                <h4>Что-нибудь еще</h4>
+                <h5>Текст-рыба</h5>
+            </div>
+        </footer>
     );
 }
