@@ -71,6 +71,7 @@ body{
         color:black;
         font-family: 'PT Sans Caption', sans-serif;
         text-decoration: none;
+        font-size: 1.1vw;
 
         .pointer{
             display: none;
@@ -103,7 +104,7 @@ body{
                 };
                 color: white;
                 font-family: $main_font;
-                font-size: 1.3em;
+                font-size: 1vw;
                 text-decoration: none;
 
                 &:hover{
@@ -131,7 +132,7 @@ body{
     .logo_container{
         @include flex-container-column;
         @include center_horizontal_and_vertical;
-        margin: 20px;
+        margin: 1.2vw;
         color: black;
         font-family: $main_font;
         text-decoration: none;
@@ -159,7 +160,7 @@ body{
 
         .name{
             font-family: 'PT Sans Caption', sans-serif;
-            font-size: large;
+            font-size: 1.4vw;
         }
     }
 }
@@ -219,7 +220,7 @@ body{
                 bottom: 0;
                 left: 10px;
                 color: white;
-                font-size: 1.8rem;
+                font-size: 1.9vw;
                 @include text_border(1);
             }
 
@@ -227,7 +228,7 @@ body{
                 display: none;
                 color: white;
                 font-family: $main_font;
-                font-size: 1.5em;
+                font-size: 1.7vw;
                 padding: 20px;
                 @include text_border(1);
             }
@@ -264,9 +265,9 @@ body{
         font-family: $main_font;
         color: white;
         @include text_border(2);
-        top:-50vh;
+        top: -50vh;
         left: 25%;
-        font-size: 5em;
+        font-size: 5vw;
     }
 }
 
