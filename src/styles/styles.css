@@ -73,13 +73,7 @@ body {
   font-size: 1vw;
   text-decoration: none;
 }
-.nav_panel .nav_button:hover {
-  color: red;
-}
-.nav_panel .nav_button:hover .submenu, .nav_panel .nav_button:hover .pointer {
-  display: flex;
-}
-.nav_panel .nav_button:hover::before {
+.nav_panel .nav_button::before {
   content: "";
   position: absolute;
   left: 0;
@@ -87,13 +81,16 @@ body {
   width: 0%;
   height: 0.2vw;
   background-color: red;
-  animation: load 2s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
-  animation-delay: 100ms;
+  transition: width 0.5s;
 }
-@keyframes load {
-  100% {
-    width: 100%;
-  }
+.nav_panel .nav_button:hover {
+  color: red;
+}
+.nav_panel .nav_button:hover .submenu, .nav_panel .nav_button:hover .pointer {
+  display: flex;
+}
+.nav_panel .nav_button:hover::before {
+  width: 100%;
 }
 .nav_panel ul {
   display: flex;
@@ -260,13 +257,11 @@ body {
   height: fit-content;
 }
 .footer .info_column h4 {
-  text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
   color: white;
   font-family: "PT Sans Caption", sans-serif;
   font-size: 1.2vw;
 }
 .footer .info_column h5 {
-  text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
   color: white;
   font-family: "PT Sans Caption", sans-serif;
   font-size: 1vw;
