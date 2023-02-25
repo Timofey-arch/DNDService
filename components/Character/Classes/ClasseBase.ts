@@ -2,28 +2,92 @@ import {Item} from "./Item";
 
 
 export class ClasseBase {
-    public boneHits: number;
-    public hitsAtLevel1:number;
-    public hitsAtNextLevel: number;
+    private _boneHits: number;
+    private _hitsAtLevel1:number;
+    private _hitsAtNextLevel: number;
 
-    public armors: Array<string>;
-    public weapons: Array<string>;
-    public tools: Array<string>;
-    public listSaveRolls: Array<string>;
+    private _armors: Array<string>;
+    private _weapons: Array<string>;
+    private _tools: Array<string>;
+    private _listSaveRolls: Array<string>;
 
-    public equipment: Array<Item>;
+    private _equipment: Array<Item>;
 
 
 
     constructor(boneHits: number, hitsAtLevel1:number, hitsAtNextLevel: number, armors: Array<string>,
                 weapons: Array<string>, tools: Array<string>, listSaveRolls: Array<string>, equipment: Array<Item>) {
-        this.boneHits = boneHits;
-        this.hitsAtLevel1 = hitsAtLevel1;
-        this.hitsAtNextLevel = hitsAtNextLevel;
-        this.armors = armors;
-        this.weapons = weapons;
-        this.tools = tools;
-        this.listSaveRolls  = listSaveRolls;
-        this.equipment = equipment;
+        this._boneHits = boneHits;
+        this._hitsAtLevel1 = hitsAtLevel1;
+        this._hitsAtNextLevel = hitsAtNextLevel;
+        this._armors = armors;
+        this._weapons = weapons;
+        this._tools = tools;
+        this._listSaveRolls  = listSaveRolls;
+        this._equipment = equipment;
+    }
+
+    get boneHits(): number {
+        return this._boneHits;
+    }
+
+    set boneHits(value: number) {
+        this._boneHits = value;
+    }
+
+    get hitsAtLevel1(): number {
+        return this._hitsAtLevel1;
+    }
+
+    set hitsAtLevel1(value: number) {
+        this._hitsAtLevel1 = value;
+    }
+
+    get hitsAtNextLevel(): number {
+        return this._hitsAtNextLevel;
+    }
+
+    set hitsAtNextLevel(value: number) {
+        this._hitsAtNextLevel = value;
+    }
+
+    get armors(): Array<string> {
+        return this._armors;
+    }
+
+    set armors(value: Array<string>) {
+        this._armors = value;
+    }
+
+    get weapons(): Array<string> {
+        return this._weapons;
+    }
+
+    set weapons(value: Array<string>) {
+        this._weapons = value;
+    }
+
+    get tools(): Array<string> {
+        return this._tools;
+    }
+
+    set tools(value: Array<string>) {
+        this._tools = value;
+    }
+
+    get listSaveRolls(): Array<string> {
+        return this._listSaveRolls;
+    }
+
+    set listSaveRolls(value: Array<string>) {
+        this._listSaveRolls = value;
+    }
+
+    get equipment(): Array<Item> {
+        return this._equipment;
+    }
+
+    set equipment(value: Array<Item>) {
+        this._equipment = value;
     }
 }
