@@ -13,6 +13,7 @@
     .form_field{
         @include flex-container-row;
         justify-content: space-around;
+        align-items: center;
         color: black;
         font-family: $main_font;
         margin: {
@@ -29,6 +30,10 @@
 
         input , select{
             width: 85%;
+            padding: 1%;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            border-radius: .5vh;
+            border: 1px black solid;
         }
     }
 
@@ -52,5 +57,6 @@
             top: 4px rgb(17, 17, 17) solid;
             right: 4px rgb(17, 17, 17) solid;
         };
+        font-family: $main_font;
     }
 }

@@ -15,6 +15,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   color: black;
   font-family: "PT Sans Caption", sans-serif;
   margin-top: 1vh;
@@ -29,10 +30,14 @@
 }
 .character_form .form_field input, .character_form .form_field select {
   width: 85%;
+  padding: 1%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 0.5vh;
+  border: 1px black solid;
 }
 .character_form h2 {
   color: black;
-  font-size: 1.5vw;
+  font-size: 2.5vw;
   font-family: "PT Sans Caption", sans-serif;
 }
 .character_form .description {
@@ -45,4 +50,5 @@
   border-bottom: 4px rgb(108, 108, 108) solid;
   border-top: 4px rgb(17, 17, 17) solid;
   border-right: 4px rgb(17, 17, 17) solid;
+  font-family: "PT Sans Caption", sans-serif;
 }
