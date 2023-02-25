@@ -1,16 +1,14 @@
-import {Item} from "./Item";
+import {Item} from "../../Item/Item";
 
 
-export class ClasseBase {
-    get description(): string {
-        return this._description;
-    }
+export class Class {
+    private _level: number;
+    private _nameClass: String;
+    private _description: string;
+    private _ability: Array<string>;
 
-    set description(value: string) {
-        this._description = value;
-    }
     private _boneHits: number;
-    private _hitsAtLevel1:number;
+    private _hitsAtLevel1: number;
     private _hitsAtNextLevel: number;
 
     private _armors: Array<string>;
@@ -19,21 +17,22 @@ export class ClasseBase {
     private _listSaveRolls: Array<string>;
 
     private _equipment: Array<Item>;
-
-    private _description: string;
-
-    constructor(boneHits: number, hitsAtLevel1:number, hitsAtNextLevel: number, armors: Array<string>,
-                weapons: Array<string>, tools: Array<string>, listSaveRolls: Array<string>, equipment: Array<Item>,
-                description: string) {
+    
+    constructor(level: number, nameClass: String, description: string, ability: Array<string>, boneHits: number,
+                hitsAtLevel1: number, hitsAtNextLevel: number, armors: Array<string>, weapons: Array<string>,
+                tools: Array<string>, listSaveRolls: Array<string>, equipment: Array<Item>) {
+        this._level = level;
+        this._nameClass = nameClass;
+        this._description = description;
+        this._ability = ability;
         this._boneHits = boneHits;
         this._hitsAtLevel1 = hitsAtLevel1;
         this._hitsAtNextLevel = hitsAtNextLevel;
         this._armors = armors;
         this._weapons = weapons;
         this._tools = tools;
-        this._listSaveRolls  = listSaveRolls;
+        this._listSaveRolls = listSaveRolls;
         this._equipment = equipment;
-        this._description = description;
     }
 
     get boneHits(): number {
@@ -100,4 +99,37 @@ export class ClasseBase {
         this._equipment = value;
     }
 
+    get description(): string {
+        return this._description;
+    }
+
+    set description(value: string) {
+        this._description = value;
+    }
+
+
+    get level(): number {
+        return this._level;
+    }
+
+    set level(value: number) {
+        this._level = value;
+    }
+
+    get nameClass(): String {
+        return this._nameClass;
+    }
+
+    set nameClass(value: String) {
+        this._nameClass = value;
+    }
+
+
+    get ability(): Array<string> {
+        return this._ability;
+    }
+
+    set ability(value: Array<string>) {
+        this._ability = value;
+    }
 }
