@@ -2,6 +2,13 @@ import {Item} from "./Item";
 
 
 export class ClasseBase {
+    get description(): string {
+        return this._description;
+    }
+
+    set description(value: string) {
+        this._description = value;
+    }
     private _boneHits: number;
     private _hitsAtLevel1:number;
     private _hitsAtNextLevel: number;
@@ -13,10 +20,11 @@ export class ClasseBase {
 
     private _equipment: Array<Item>;
 
-
+    private _description: string;
 
     constructor(boneHits: number, hitsAtLevel1:number, hitsAtNextLevel: number, armors: Array<string>,
-                weapons: Array<string>, tools: Array<string>, listSaveRolls: Array<string>, equipment: Array<Item>) {
+                weapons: Array<string>, tools: Array<string>, listSaveRolls: Array<string>, equipment: Array<Item>,
+                description: string) {
         this._boneHits = boneHits;
         this._hitsAtLevel1 = hitsAtLevel1;
         this._hitsAtNextLevel = hitsAtNextLevel;
@@ -25,6 +33,7 @@ export class ClasseBase {
         this._tools = tools;
         this._listSaveRolls  = listSaveRolls;
         this._equipment = equipment;
+        this._description = description;
     }
 
     get boneHits(): number {
@@ -90,4 +99,5 @@ export class ClasseBase {
     set equipment(value: Array<Item>) {
         this._equipment = value;
     }
+
 }

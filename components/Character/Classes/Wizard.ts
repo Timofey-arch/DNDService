@@ -3,17 +3,20 @@ import {Spell} from "./Spell";
 
 export class Wizard {
     private _level: number;
+    private _nameClass: String;
     private _ability: Array<string>;
-    private _hits: ClasseBase;
+    private _classBase: ClasseBase;
     private _numberOfSpellCells: number;
     private _spell: Spell;
 
-    constructor(level: number, ability: Array<string>, hits: ClasseBase, numberOfSpellCells: number, spell: Spell) {
+    constructor(level: number, ability: Array<string>, classBase: ClasseBase, numberOfSpellCells: number, spell: Spell,
+                nameClass: String) {
         this._level = level;
         this._ability = ability;
-        this._hits = hits;
+        this._classBase = classBase;
         this._numberOfSpellCells = numberOfSpellCells;
         this._spell = spell;
+        this._nameClass = nameClass;
     }
 
     get level(): number {
@@ -33,11 +36,11 @@ export class Wizard {
     }
 
     get hits(): ClasseBase {
-        return this._hits;
+        return this._classBase;
     }
 
     set hits(value: ClasseBase) {
-        this._hits = value;
+        this._classBase = value;
     }
 
     get numberOfSpellCells(): number {
