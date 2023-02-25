@@ -1,11 +1,11 @@
-export class Stats {
+export class Stats{
     public strength: number;
     public dexterity: number;
     public endurance: number;
     public intelligence: number;
     public wisdom: number;
     public charisma: number;
-
+    
     public saveRolls: object = {
         strength: null,
         dexterity: null,
@@ -37,7 +37,7 @@ export class Stats {
     }
 
     constructor(strength: number, dexterity: number, endurance: number, intelligence: number, wisdom: number,
-                charisma: number) {
+        charisma: number) {
         this.strength = strength
         this.dexterity = dexterity
         this.endurance = endurance
@@ -45,7 +45,4 @@ export class Stats {
         this.wisdom = wisdom
         this.charisma = charisma
     }
-
-
-
 }

@@ -4,7 +4,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(../../public/images/tavern_back.jpg);
+  background-image: url(../../../public/images/tavern_back.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -61,7 +61,7 @@ body {
   position: absolute;
   width: 100vw;
   height: 40vh;
-  background-color: rgb(220, 220, 220);
+  background-color: white;
   filter: opacity(95%);
 }
 .nav_panel .nav_button .submenu .submenu_button {
@@ -146,8 +146,9 @@ body {
   align-items: center;
   width: 100%;
   height: 90vh;
-  background-color: #efeae7;
+  background-color: black;
   padding-bottom: 10vh;
+  background-color: white;
 }
 .main_section section .icon_container {
   display: flex;
@@ -157,19 +158,19 @@ body {
   flex-wrap: wrap;
 }
 .main_section section .icon_container > :nth-child(1) :first-child {
-  background-image: url("../../public/images/character_list.jpg");
+  background-image: url("../../../public/images/character_list.jpg");
   background-size: cover;
 }
 .main_section section .icon_container > :nth-child(2) :first-child {
-  background-image: url("../../public/images/Master.jpg");
+  background-image: url("../../../public/images/Master.jpg");
   background-size: cover;
 }
 .main_section section .icon_container > :nth-child(3) :first-child {
-  background-image: url("../../public/images/Reference.jpg");
+  background-image: url("../../../public/images/Reference.jpg");
   background-size: cover;
 }
 .main_section section .icon_container > :nth-child(4) :first-child {
-  background-image: url("../../public/images/Dev.jpg");
+  background-image: url("../../../public/images/Dev.jpg");
   background-size: cover;
 }
 .main_section section .icon {
@@ -186,6 +187,7 @@ body {
   border-right: 5px rgb(17, 17, 17) solid;
   position: relative;
   cursor: pointer;
+  text-decoration: none;
 }
 .main_section section .icon h3 {
   font-family: "PT Sans Caption", sans-serif;

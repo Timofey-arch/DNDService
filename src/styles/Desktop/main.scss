@@ -1,9 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/pt-sans-caption');
-
-$main_color: black;
-$secondary_color: white;
-$main_font: 'PT Sans Caption', sans-serif;
-
+@import "../variables";
 
 // Desktop version of styles
 body{
@@ -11,37 +6,11 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(../../public/images/tavern_back.jpg);
+    background-image: url(../../../public/images/tavern_back.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     margin: 0;
-}
-
-@mixin flex-container-row{
-    display: flex;
-    flex-direction: row;
-}
-
-@mixin flex-container-column{
-    display: flex;
-    flex-direction: column;
-}
-
-@mixin text_border($thickness) {
-    text-shadow: #{$thickness}px 0 #{$thickness}px #000, 0 #{$thickness}px #{$thickness}px #000, 
-    #{- $thickness}px 0 #{$thickness}px #000, 0 #{- $thickness}px #{$thickness}px #000;
-}
-
-@mixin center_horizontal_and_vertical{
-    justify-content: center;
-    align-items: center;
-}
-
-@mixin text_highlighting($transition, $color, $decoration_style){
-    transition: $transition;
-    text-decoration: $decoration_style solid $color;
-    color: $color;
 }
 
 .nav_panel{
@@ -189,6 +158,7 @@ body{
         height: 90vh;
         background-color: $main_color;
         padding-bottom: 10vh;
+        background-color: $secondary_color;
 
         .icon_container{
             @include flex-container-row;
@@ -201,7 +171,7 @@ body{
                                         3: 'Reference',
                                         4: 'Dev') {
                 & > :nth-child(#{$number}) :first-child{
-                    background-image: url('../../public/images/#{$picture}.jpg');
+                    background-image: url('../../../public/images/#{$picture}.jpg');
                     background-size: cover;
                 }
             }
@@ -217,10 +187,11 @@ body{
                 left: 5px rgb(49, 49, 49) solid;
                 bottom: 5px rgb(49, 49, 49) solid;
                 top: 5px rgb(17, 17, 17) solid;
-                right: 5px rgb(17, 17, 17) solid
+                right: 5px rgb(17, 17, 17) solid;
             };
             position: relative;
             cursor: pointer;
+            text-decoration: none;
 
             h3 {
                 font-family: $main_font;
@@ -284,7 +255,6 @@ body{
         font-size: 2.5vw;
     }
 }
-
 
 .footer{
     @include flex-container-row;

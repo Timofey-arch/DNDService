@@ -7,9 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "sass": "sass --watch --no-source-map src/styles/styles.scss src/styles/styles.css",
+    "sass_main": "sass --watch --no-source-map src/styles/Desktop/main.scss src/styles/Desktop/main.css",
+    "sass_character_form": "sass --watch --no-source-map src/styles/Desktop/character_form.scss src/styles/Desktop/character_form.css",
     "install_all_packages": "npm install"
   },
+
   "dependencies": {
     "@next/font": "13.1.6",
     "@types/node": "18.13.0",

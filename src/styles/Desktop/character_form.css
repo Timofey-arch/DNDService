@@ -1,0 +1,48 @@
+@import url("https://fonts.cdnfonts.com/css/pt-sans-caption");
+.character_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 11vh;
+  width: 60vw;
+  height: fit-content;
+  border-radius: 1vw;
+  background-color: white;
+}
+.character_form .form_field {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: black;
+  font-family: "PT Sans Caption", sans-serif;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  padding: 0;
+  width: 50%;
+}
+.character_form .form_field label {
+  display: flex;
+  flex-direction: row;
+  width: 15%;
+}
+.character_form .form_field input, .character_form .form_field select {
+  width: 85%;
+}
+.character_form h2 {
+  color: black;
+  font-size: 1.5vw;
+  font-family: "PT Sans Caption", sans-serif;
+}
+.character_form .description {
+  width: calc(50% - 8px);
+  height: 10vh;
+  border: 1px black solid;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  border-left: 4px rgb(108, 108, 108) solid;
+  border-bottom: 4px rgb(108, 108, 108) solid;
+  border-top: 4px rgb(17, 17, 17) solid;
+  border-right: 4px rgb(17, 17, 17) solid;
+}

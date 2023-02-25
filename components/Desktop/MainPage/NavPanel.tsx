@@ -1,14 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import Logo from '../../public/images/Logo.png';
-import Logo2 from '../../public/images/Logo2.png';
+import Logo from '../../../public/images/Logo2.png';
 
 export default function NavPanel(props: any){
     return(
         <nav className="nav_panel">
             <ul> 
                 <Link className="logo_container" href='/'>
-                    <Image className="logo" alt="Logo" src={Logo2}></Image>
+                    <Image className="logo" alt="Logo" src={Logo}></Image>
                     <div className="name">Tavern</div>
                 </Link>
 

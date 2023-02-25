@@ -16,7 +16,7 @@ export class Wizard {
         this.spell = spell;
     }
 
-    
+
 
 
 }
