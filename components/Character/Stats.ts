@@ -21,7 +21,5 @@ export class Stats{
         //Дописать
     }
 
-    constructor(){}
-
-    
+    constructor(){}  
 }

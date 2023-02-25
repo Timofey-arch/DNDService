@@ -1,0 +1,31 @@
+@import url('https://fonts.cdnfonts.com/css/pt-sans-caption');
+
+$main_color: black;
+$secondary_color: white;
+$main_font: 'PT Sans Caption', sans-serif;
+
+@mixin flex-container-row{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-container-column{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin text_border($thickness) {
+    text-shadow: #{$thickness}px 0 #{$thickness}px #000, 0 #{$thickness}px #{$thickness}px #000, 
+    #{- $thickness}px 0 #{$thickness}px #000, 0 #{- $thickness}px #{$thickness}px #000;
+}
+
+@mixin center_horizontal_and_vertical{
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin text_highlighting($transition, $color, $decoration_style){
+    transition: $transition;
+    text-decoration: $decoration_style solid $color;
+    color: $color;
+}

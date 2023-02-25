@@ -1,6 +1,6 @@
 import Image from "next/image";
-import VKPicture from '../../public/images/VK.png';
-import TelegramPicture from '../../public/images/tel.png';
+import VKPicture from '../../../public/images/VK.png';
+import TelegramPicture from '../../../public/images/tel.png';
 import Link from "next/link";
 
 export default function Footer(props: any){
