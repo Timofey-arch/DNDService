@@ -11,7 +11,7 @@ export default function MainSection(props: any){
                     <Link className="icon" href="/character_list">
                         <div className="picture"></div>
                         <h3>Интерактивный лист персонажа</h3>
-                        <p>Создайте своего уникального персонажа</p>
+                        <p>Создайте своего уникального персонажа и идите навстречу приключениям!</p>
                     </Link>
 
                     <Link className="icon" href="/">
@@ -23,13 +23,13 @@ export default function MainSection(props: any){
                     <Link className="icon" href="/">
                         <div className="picture"></div>
                         <h3>Справочный материал</h3>
-                        <p>Ознакомьтесь  с правилами игры</p>
+                        <p>Ознакомьтесь  с правилами игры, ведь их так много!</p>
                     </Link>
                     
                     <Link className="icon" href="/">
                         <div className="picture"></div>
                         <h3>Для разработчиков</h3>
-                        <p>Недостаточно функций на сайте? Сделай собственную!</p>
+                        <p>Недостаточно функций на сайте? Наше API даст вам возможность создать что-то свое!</p>
                     </Link>
                 </div>
             </section>

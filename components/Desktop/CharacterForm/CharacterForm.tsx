@@ -1,10 +1,9 @@
 import { useState } from "react";
+import Stat from "./Stat";
 
 export default function CharacterForm(props: any){
     const[race, setRace] = useState("Гном");
-    const[raceDescr, setRaceDescr] = useState("1");
     const[playerClass, setPlayerClass] = useState("Бард");
-    const[playerClassDescr, setPlayerClassDescr] = useState("1");
 
     const races = [
         {name:"Гном", description: "1"}, {name:"Дварф", description: "2"}, 
@@ -32,38 +31,56 @@ export default function CharacterForm(props: any){
         <form className="character_form">
             <h2>Создать персонажа</h2>
 
+            {/* Вынести в компоненты диалоговые элементы по типу списков, полей ввода текста и т.д.*/}
             <section className="form_field">
                 <label htmlFor="name">Имя</label>
                 <input type={"text"} name="name"></input>
             </section>
 
+            
             <section className="form_field">
                 <label htmlFor="class">Класс</label>
 
-                <select name="class" onChange={e => (setPlayerClass(e.target.value))}>
+                <select name="class" onChange={event => (setPlayerClass(event.target.value))}>
                     {classes.map((pclass) => {
                         return <option value={pclass.name}>{pclass.name}</option>
                     })}
                 </select>
             </section>
-
             <div className="description">
                 <div>{playerClass}</div>
+                <div>Это описание класса. Здесь будет всякая фигня, которая кратко описывает класс, его фишки и стартовый набор</div>
             </div>
-               
+            
             <section className="form_field">
                 <label htmlFor="race">Раса</label>
                 
-                <select name="race" onChange={e => setRace(e.target.value)}>
+                <select name="race" onChange={event => setRace(event.target.value)}>
                     {races.map((race) => {
                         return <option value={race.name}>{race.name}</option>
                     })}
                 </select>
             </section>
-
             <div className="description">
                 <div>{race}</div>
+                <div>Это описание расы. Здесь так же будет краткая информация и преимущества расы.</div>
             </div>
+
+            <h3>Выберите стартовые параметры</h3>
+            <section className="stats_field">
+                <Stat stat_name={"Сила"}></Stat>
+                <Stat stat_name={"Ловкость"}></Stat>
+                <Stat stat_name={"Выносливость"}></Stat>
+                <Stat stat_name={"Интеллект"}></Stat>
+                <Stat stat_name={"Мудрость"}></Stat>
+                <Stat stat_name={"Харизма"}></Stat>
+            </section>
+
+            <h3>Снаряжение</h3>
+            <section className="equipment_field">
+                Здесь будет выбор снаряжения
+            </section>
+
         </form>
     );
 }

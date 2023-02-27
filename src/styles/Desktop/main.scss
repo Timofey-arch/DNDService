@@ -63,6 +63,7 @@ body{
             width: 100vw;
             height: 40vh;
             background-color: $secondary_color;
+            border-bottom: 2px black solid;
             filter: opacity(95%);
 
             .submenu_button{
@@ -234,6 +235,10 @@ body{
 
                 h2 {
                     scale: (1.02 - 5px);
+                }
+
+                h3{
+                    display: none;
                 }
             }
         }
