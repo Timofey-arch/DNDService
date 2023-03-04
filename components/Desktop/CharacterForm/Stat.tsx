@@ -6,21 +6,27 @@ import React from 'react';
 
 
 export default function Stat(props: any){
-    const [statValue, setStatValue] = useState(10);
+    const [statValue, setStatValue] = useState(0);
 
     function reduceCount(event: React.MouseEvent<HTMLElement>){
         event.preventDefault();
-        setStatValue(statValue >= 1 ? statValue - 1 : statValue);
+        if(statValue > 0){
+            setStatValue(statValue - 1);
+            props.setPointCount(props.pointCount + 1);
+        }
     }
 
     function increaseCount(event: React.MouseEvent<HTMLElement>){
         event.preventDefault();
-        setStatValue(statValue < 20 ? statValue + 1 : statValue);
+        if(statValue < 20 && props.pointCount > 0){
+            setStatValue(statValue + 1);
+            props.setPointCount(props.pointCount - 1);
+        }
     }
 
     return(
-        <div className="stat">
-            <div className="stat_name">{props.stat_name}</div>
+        <section className="stat">
+            <div className="stat_name">{props.statName}</div>
 
             <div className="stat_value">{statValue}</div>
 
@@ -33,6 +39,6 @@ export default function Stat(props: any){
                     <Image src={PlusIcon} alt="minus" className="button_img"></Image>
                 </button>
             </div>
-        </div>
+        </section>
     );
 }

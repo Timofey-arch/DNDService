@@ -2,6 +2,7 @@ import Image from "next/image";
 import VKPicture from '../../../public/images/VK.png';
 import TelegramPicture from '../../../public/images/tel.png';
 import Link from "next/link";
+import React from "react";
 
 export default function Footer(props: any){
     return(
