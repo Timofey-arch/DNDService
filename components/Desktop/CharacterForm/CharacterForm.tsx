@@ -1,19 +1,26 @@
 import { useState } from "react";
+import ComboBox from "./ComboBox";
+import Description from "./Description";
+import InputField from "./InputField";
+import Stat from "./Stat";
 
 export default function CharacterForm(props: any){
-    const[race, setRace] = useState("Гном");
-    const[raceDescr, setRaceDescr] = useState("1");
-    const[playerClass, setPlayerClass] = useState("Бард");
-    const[playerClassDescr, setPlayerClassDescr] = useState("1");
+    const [race, setRace] = useState("Гном");
+    const [playerClass, setPlayerClass] = useState("Бард");
+    const [manualFieldVisibility, setManualFieldVisibility] = useState("none");
+    const [randomFieldVisibility, setRandomFieldVisibility] = useState("none");
+    const [pointCount, setPoinCount] = useState(30);
 
-    const races = [
+    const races: Array<object> = [
         {name:"Гном", description: "1"}, {name:"Дварф", description: "2"}, 
         {name:"Драконорожденный", description: "3"}, {name:"Полуорк", description: "4"}, 
         {name:"Полурослик", description: "5"}, {name:"Полуэльф", description: "6"}, {name:"Тифлинг", description: "7"}, 
         {name:"Человек", description: "8"}, {name:"Эльф", description: "9"}, 
     ];
-    
-    const classes = [
+
+    const statsNames: Array<String> = ["Сила", "Ловкость", "Выносливость", "Интеллект", "Мудрость", "Харизма"];
+
+    const classes: Array<object>= [
         {name: "Бард", description: "1"},
         {name: "Варвар", description: "2"},
         {name: "Воин", description: "3"},
@@ -28,42 +35,49 @@ export default function CharacterForm(props: any){
         {name: "Чародей", description: "12"},
     ];
 
+    function setManualFieldState(event: React.MouseEvent<HTMLElement>){
+        event.preventDefault();
+        setManualFieldVisibility(manualFieldVisibility == "none" ? "flex" : "none");
+    }
+
+    function setRandomFieldState(event: React.MouseEvent<HTMLElement>){
+        event.preventDefault();
+        setRandomFieldVisibility(randomFieldVisibility == "none" ? "flex" : "none");
+    }
+
     return(
         <form className="character_form">
             <h2>Создать персонажа</h2>
 
-            <section className="form_field">
-                <label htmlFor="name">Имя</label>
-                <input type={"text"} name="name"></input>
+            <InputField name={"name"} label={"Имя"}></InputField>
+            
+            <ComboBox optionList={classes} setClass={setPlayerClass} label={"Класс"} name={"class"}></ComboBox>
+            <Description currentValue={playerClass}></Description>
+
+            <ComboBox optionList={races} setClass={setRace} label={"Раса"} name={"race"}></ComboBox>
+            <Description currentValue={race}></Description>
+
+            <ComboBox optionList={races} setClass={setRace} label={"Происхождение"} name={"amoma"}></ComboBox>
+            <Description currentValue={"Amoma"}></Description>
+
+            <h3>Выберите способ распределения навыков</h3>
+
+            
+            {/* Вынести в отдельный компонент со своим состоянием "открытости", убрать хуки из формы соответственно */}
+            <button className="open_field_button" onClick={setManualFieldState}>Вручную - {pointCount}</button>
+            <section className="stats_field" style={{display: manualFieldVisibility}}>
+                {statsNames.map((statName) => {
+                    return <Stat statName={statName} pointCount={pointCount} setPointCount={setPoinCount}></Stat>
+                })}
             </section>
 
-            <section className="form_field">
-                <label htmlFor="class">Класс</label>
-
-                <select name="class" onChange={e => (setPlayerClass(e.target.value))}>
-                    {classes.map((pclass) => {
-                        return <option value={pclass.name}>{pclass.name}</option>
-                    })}
-                </select>
+            <button className="open_field_button" onClick={setRandomFieldState}>Рандомно</button>
+            
+            <h3>Снаряжение</h3>
+            <section className="equipment_field">
+                Здесь будет выбор снаряжения
             </section>
 
-            <div className="description">
-                <div>{playerClass}</div>
-            </div>
-               
-            <section className="form_field">
-                <label htmlFor="race">Раса</label>
-                
-                <select name="race" onChange={e => setRace(e.target.value)}>
-                    {races.map((race) => {
-                        return <option value={race.name}>{race.name}</option>
-                    })}
-                </select>
-            </section>
-
-            <div className="description">
-                <div>{race}</div>
-            </div>
         </form>
     );
 }

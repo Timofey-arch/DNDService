@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Logo from '../../../public/images/Logo2.png';
+import React from "react";
 
 export default function NavPanel(props: any){
     return(
