@@ -96,7 +96,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: calc(33% - 2px - 0.4vw);
+  width: calc(33% - 4px - 0.4vw);
   height: 20vh;
   position: relative;
   border: 2px black solid;
