@@ -17,7 +17,7 @@ export class Class {
     private _listSaveRolls: Array<string>;
 
     private _equipment: Array<Item>;
-    
+
     constructor(level: number, nameClass: String, description: string, ability: Array<string>, boneHits: number,
                 hitsAtLevel1: number, hitsAtNextLevel: number, armors: Array<string>, weapons: Array<string>,
                 tools: Array<string>, listSaveRolls: Array<string>, equipment: Array<Item>) {
