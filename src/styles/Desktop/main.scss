@@ -43,7 +43,7 @@ body{
         .pointer{
             display: none;
             position: absolute;
-            left: 43%;
+            left: calc(50% - 10px);
             top: 100%;
             width: 0;
             height: 0;
@@ -87,7 +87,6 @@ body{
             width: 0%;
             height: .2vw;
             background-color: red;
-            transition: width 0.5s;
         }
 
         &:hover{

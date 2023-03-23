@@ -15,8 +15,11 @@ $main_font: 'PT Sans Caption', sans-serif;
 }
 
 @mixin text_border($thickness) {
-    text-shadow: #{$thickness}px 0 #{$thickness}px #000, 0 #{$thickness}px #{$thickness}px #000, 
-    #{- $thickness}px 0 #{$thickness}px #000, 0 #{- $thickness}px #{$thickness}px #000;
+    text-shadow: 
+        #{$thickness}px 0 #{$thickness}px #000, 
+        0 #{$thickness}px #{$thickness}px #000, 
+        #{- $thickness}px 0 #{$thickness}px #000, 
+        0 #{- $thickness}px #{$thickness}px #000;
 }
 
 @mixin center_horizontal_and_vertical{
