@@ -1,5 +1,4 @@
-import { Item } from "../Items/Item";
-
+import {Item} from "../Items/Item";
 
 export class Class {
     private _level: number;
