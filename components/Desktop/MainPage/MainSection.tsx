@@ -6,10 +6,9 @@ export default function MainSection(props: any){
         <main className="main_section">
             <h1>Добро пожаловать!</h1>
             <section>
-                {/* Изменить заголовок */}
                 <h2>Инструменты для игры</h2>
                 <div className="icon_container">
-                    <Link className="icon" href="/character_list">
+                    <Link className="icon" href="/character_form">
                         <div className="picture"></div>
                         <h3>Интерактивный лист персонажа</h3>
                         <p>Создайте своего уникального персонажа и идите навстречу приключениям!</p>

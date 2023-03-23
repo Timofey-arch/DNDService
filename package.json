@@ -11,7 +11,6 @@
     "sass_character_form": "sass --watch --no-source-map src/styles/Desktop/character_form.scss src/styles/Desktop/character_form.css",
     "install_all_packages": "npm install"
   },
-
   "dependencies": {
     "@next/font": "13.1.6",
     "@types/node": "18.13.0",
@@ -19,6 +18,7 @@
     "@types/react-dom": "18.0.11",
     "eslint-config-next": "13.1.6",
     "next": "13.1.6",
+    "pocketbase": "^0.12.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.58.3",

@@ -4,13 +4,19 @@ import ButtonContainer from "./ButtonContainer";
 import MainInfoWindow from "./MainInfoWindow";
 import StatWindow from "./StatWindow";
 
-export default function CharacterForm(){
+export default function CharacterForm(props: any){
     const [currentWindow, setCurrentWindow] = useState(1);
 
     return(
         <div className="character_form_main_container">
             <form action="/api/create_character" method="POST">
-                <MainInfoWindow currentWindowNumber={currentWindow} windowNumber={1}></MainInfoWindow>
+                <MainInfoWindow 
+                    currentWindowNumber={currentWindow} 
+                    windowNumber={1} 
+                    classes={props.classes} 
+                    races={props.races}
+                >    
+                </MainInfoWindow>
 
                 <StatWindow currentWindowNumber={currentWindow} windowNumber={2}></StatWindow>
             </form>
