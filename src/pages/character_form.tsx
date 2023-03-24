@@ -22,7 +22,8 @@ export default function CharacterList({ classes, races }){
 
 export async function getServerSideProps(){
     const pb = new PocketBase(process.env.DATABASE_URL);
-    await pb.admins.authWithPassword('timofejbakurov@gmail.com', 'aboba12345');
+    //await pb.admins.authWithPassword('timofejbakurov@gmail.com', 'aboba12345');
+    await pb.admins.authWithPassword('s.laptev2017@yandex.ru', 'aboba12345')
 
     const classes = await pb.collection('classes').getList(1, 50, {
         sort: 'created',
