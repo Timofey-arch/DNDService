@@ -8,6 +8,8 @@ export default function MainInfoWindow(props: any){
     const [raceDescription, setRaceDescription] = useState(props.races.items[0].description);
     const [playerClass, setPlayerClass] = useState("Волшебник");
     const [classDescription, setClassDescription] = useState(props.classes.items[0].description);
+    const [background, setBackgrounds] = useState("Моряк");
+    const [backDescription, setBackDescription] = useState(props.backgrounds.items[0].description);
 
     const races: Array<object> = [
         {name:"Гном", description: "1"}, {name:"Дварф", description: "2"}, 
@@ -32,8 +34,9 @@ export default function MainInfoWindow(props: any){
                 label={"Раса"} name={"race"}></ComboBox>
             <Description currentValue={race} description={raceDescription}></Description>
 
-            <ComboBox optionList={races} setFunction={setRace} label={"Происхождение"} name={"amoma"}></ComboBox>
-            <Description currentValue={"Amoma"}></Description>
+            <ComboBox optionList={props.backgrounds.items} setName={setBackgrounds} setDescription={setBackDescription}
+                      label={"Происхождение"} name={"background"}></ComboBox>
+            <Description currentValue={background} description={backDescription}></Description>
         </div>
     );
 }

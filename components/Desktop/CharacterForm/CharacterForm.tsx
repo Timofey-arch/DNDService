@@ -15,6 +15,8 @@ export default function CharacterForm(props: any){
                     windowNumber={1} 
                     classes={props.classes} 
                     races={props.races}
+                    backgrounds = {props.backgrounds}
+
                 >    
                 </MainInfoWindow>
 
