@@ -4,7 +4,6 @@ import axios from "axios";
 import RaceInfoContainer from './RaceInfoContainer';
 
 export default function Item({ item }){
-
     return(
         <>
             <NavPanel></NavPanel>

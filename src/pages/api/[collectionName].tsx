@@ -5,6 +5,6 @@ export default async function handler(req, res){
         res.status(404).json({error: "This collection does not exist"});
     }
     
-    const item = await axios.get(`http://127.0.0.1:8090/api/collections/${req.query.collectionName}/records/${req.query.id}`);
-    res.status(200).json(item.data);
+    const item = await axios.get(`http://127.0.0.1:8090/api/collections/${req.query.collectionName}/records`);
+    res.status(200).json(item.data.items);
 }
