@@ -4,39 +4,56 @@ import Description from "./Description";
 import { useState } from "react";
 
 export default function MainInfoWindow(props: any){
-    const [race, setRace] = useState("Гном");
-    const [raceDescription, setRaceDescription] = useState(props.races.items[0].description);
-    const [playerClass, setPlayerClass] = useState("Волшебник");
-    const [classDescription, setClassDescription] = useState(props.classes.items[0].description);
-    const [background, setBackgrounds] = useState("Моряк");
-    const [backDescription, setBackDescription] = useState(props.backgrounds.items[0].description);
-
-    const races: Array<object> = [
-        {name:"Гном", description: "1"}, {name:"Дварф", description: "2"}, 
-        {name:"Драконорожденный", description: "3"}, {name:"Полуорк", description: "4"}, 
-        {name:"Полурослик", description: "5"}, {name:"Полуэльф", description: "6"}, {name:"Тифлинг", description: "7"}, 
-        {name:"Человек", description: "8"}, {name:"Эльф", description: "9"}, 
-    ];
+    const [race, setRace] = useState(props.races[0].name);
+    const [raceDescription, setRaceDescription] = useState(props.races[0].description);
+    const [playerClass, setPlayerClass] = useState(props.classes[0].name);
+    const [classDescription, setClassDescription] = useState(props.classes[0].description);
+    const [background, setBackgrounds] = useState(props.backgrounds[0].name);
+    const [backDescription, setBackDescription] = useState(props.backgrounds[0].description);
 
     return(
         <div className="character_form" 
-        style={{display: props.currentWindowNumber == props.windowNumber ? "flex" : "none"}}>
+            style={{display: props.currentWindowNumber == props.windowNumber ? "flex" : "none"}}>
 
             <h3>Выбрать персонажа</h3>
 
             <InputField name={"name"} label={"Имя"}></InputField>
 
-            <ComboBox optionList={props.classes.items} setName={setPlayerClass} setDescription={setClassDescription}
-                label={"Класс"} name={"class"}></ComboBox>
-            <Description currentValue={playerClass} description={classDescription}></Description>
+            <ComboBox 
+                optionList={props.classes} 
+                setName={setPlayerClass} 
+                setDescription={setClassDescription}
+                label={"Класс"} 
+                name={"class"}> 
+            </ComboBox>
+            <Description 
+                currentValue={playerClass} 
+                description={classDescription}>
+            </Description>
 
-            <ComboBox optionList={props.races.items} setName={setRace} setDescription={setRaceDescription}
-                label={"Раса"} name={"race"}></ComboBox>
-            <Description currentValue={race} description={raceDescription}></Description>
+            <ComboBox 
+                optionList={props.races} 
+                setName={setRace} 
+                setDescription={setRaceDescription}
+                label={"Раса"} 
+                name={"race"}>
+            </ComboBox>
+            <Description 
+                currentValue={race} 
+                description={raceDescription}>
+            </Description>
 
-            <ComboBox optionList={props.backgrounds.items} setName={setBackgrounds} setDescription={setBackDescription}
-                      label={"Происхождение"} name={"background"}></ComboBox>
-            <Description currentValue={background} description={backDescription}></Description>
+            <ComboBox 
+                optionList={props.backgrounds} 
+                setName={setBackgrounds} 
+                setDescription={setBackDescription}
+                label={"Происхождение"} 
+                name={"background"}>
+            </ComboBox>
+            <Description 
+                currentValue={background} 
+                description={backDescription}>
+            </Description>
         </div>
     );
 }

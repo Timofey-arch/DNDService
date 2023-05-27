@@ -31,7 +31,7 @@ export default function NavPanel(props: any){
                     <div className="pointer"></div>
                 </Link>
 
-                <Link href='/' className="nav_button">
+                <Link href='/handbook' className="nav_button">
                     Справочник
 
                     <div className="submenu" 

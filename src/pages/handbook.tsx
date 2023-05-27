@@ -1,24 +1,27 @@
-import CharacterForm from "components/Desktop/CharacterForm/CharacterForm";
 import NavPanel from "components/Desktop/MainPage/NavPanel";
 import React, { useEffect } from "react";
 import axios from "axios";
+import HandbookMainPage from "components/Desktop/Handbook/HandbookMainPage";
 
-export default function CharacterList({ classes, races, backgrounds }){
+export default function Handbook(props){
 
     useEffect(
         () => {
-          document.title = 'List';
+          document.title = 'Handbook';
         }
     );
 
     return(
         <>
             <NavPanel></NavPanel>
-            <CharacterForm races={races} classes={classes} backgrounds = {backgrounds}></CharacterForm>
+            <HandbookMainPage 
+                classes={props.classes}
+                races={props.races}
+                backgrounds={props.backgrounds}
+            ></HandbookMainPage>
         </>
     );
 }
-
 
 export async function getServerSideProps(){
     let classes = await axios.get('http://127.0.0.1:8090/api/collections/classes/records');

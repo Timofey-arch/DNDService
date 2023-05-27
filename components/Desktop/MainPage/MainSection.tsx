@@ -20,7 +20,7 @@ export default function MainSection(props: any){
                         <p>Следить за игрой стало намного удобнее. Избавьте себя от рутинных действий!</p>
                     </Link>
 
-                    <Link className="icon" href="/">
+                    <Link className="icon" href="/handbook">
                         <div className="picture"></div>
                         <h3>Справочный материал</h3>
                         <p>Ознакомьтесь  с правилами игры, ведь их так много!</p>

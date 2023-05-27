@@ -1,0 +1,67 @@
+@import url("https://fonts.cdnfonts.com/css/pt-sans-caption");
+.handbook_main_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 11vh;
+  width: 50vw;
+  height: fit-content;
+}
+.handbook_main_container .info_section {
+  display: flex;
+  flex-direction: column;
+  border: 1px black solid;
+  width: 70vw;
+  background-color: white;
+  margin: 1vw;
+}
+.handbook_main_container .info_section .list_of_items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.handbook_main_container .info_section .list_of_items .item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 15vw;
+  height: 8vh;
+  margin: 0.5vw;
+  border: 1px black solid;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "PT Sans Caption", sans-serif;
+  text-decoration: none;
+  color: black;
+}
+.handbook_main_container .info_section .list_of_items .item .logo {
+  width: 3vw;
+  height: 3vw;
+}
+.handbook_main_container .info_section h2 {
+  color: black;
+  font-size: 2.5vw;
+  font-family: "PT Sans Caption", sans-serif;
+}
+
+.class_info_container, .race_info_container, .background_info_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  top: 11vh;
+  width: 50vw;
+  height: fit-content;
+  background-color: white;
+  padding: 1vw;
+}
+.class_info_container div, .race_info_container div, .background_info_container div {
+  font-family: "PT Sans Caption", sans-serif;
+}
+.class_info_container h1, .race_info_container h1, .background_info_container h1 {
+  font-family: "PT Sans Caption", sans-serif;
+}
