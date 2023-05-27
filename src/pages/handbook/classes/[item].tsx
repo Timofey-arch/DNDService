@@ -4,7 +4,6 @@ import axios from "axios";
 import ClassInfoContainer from './ClassInfoContainer';
 
 export default function Item({ item }){
-    const router = useRouter();
 
     return(
         <>

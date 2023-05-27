@@ -8,6 +8,7 @@
   top: 11vh;
   width: 50vw;
   height: fit-content;
+  padding: 1vw;
 }
 .handbook_main_container .info_section {
   display: flex;
@@ -16,6 +17,7 @@
   width: 70vw;
   background-color: white;
   margin: 1vw;
+  padding: 1vw;
 }
 .handbook_main_container .info_section .list_of_items {
   display: flex;
@@ -54,7 +56,7 @@
   align-items: flex-start;
   position: relative;
   top: 11vh;
-  width: 50vw;
+  width: 60vw;
   height: fit-content;
   background-color: white;
   padding: 1vw;

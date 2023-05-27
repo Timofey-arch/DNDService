@@ -1,10 +1,8 @@
 import NavPanel from 'components/Desktop/MainPage/NavPanel';
-import { useRouter } from 'next/router';
 import axios from "axios";
 import BackgroundInfoContainer from './BackgroundInfoContainer';
 
 export default function Item({ item }){
-    const router = useRouter();
 
     return(
         <>
