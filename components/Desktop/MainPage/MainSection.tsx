@@ -26,7 +26,7 @@ export default function MainSection(props: any){
                         <p>Ознакомьтесь  с правилами игры, ведь их так много!</p>
                     </Link>
                     
-                    <Link className="icon" href="/">
+                    <Link className="icon" href="/api_info">
                         <div className="picture"></div>
                         <h3>Для разработчиков</h3>
                         <p>Недостаточно функций на сайте? Наше API даст вам возможность создать что-то свое!</p>

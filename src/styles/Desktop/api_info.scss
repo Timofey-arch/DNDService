@@ -1,0 +1,44 @@
+@import "../variables";
+
+.api_info_container{
+    @include flex-container-column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    top: 11vh;
+    width: 50vw;
+    height: fit-content;
+    padding: 1vw;
+    background-color: white;
+
+    .code{
+        @include flex-container-row;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: rgb(48, 48, 48);
+        color: white;
+        padding: .5vw;
+        font-family: sans-serif;
+        width: 90%;
+        word-wrap: normal;
+
+        .request_method{
+            @include flex-container-row;
+            @include center_horizontal_and_vertical;
+            background-color: black;
+            color: white;
+            margin-right: .5vw;
+            padding: .5vw;
+        }
+    }
+
+    h2, h1{
+        color: black;
+        font-size: 2.5vw;
+        font-family: $main_font;
+    }
+
+    p{
+        font-family: sans-serif;
+    }
+}
