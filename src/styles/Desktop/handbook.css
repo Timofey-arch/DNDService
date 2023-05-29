@@ -29,19 +29,26 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  width: 15vw;
-  height: 8vh;
+  width: 30%;
+  height: 10vh;
   margin: 0.5vw;
   border: 1px black solid;
   border-radius: 10px;
+  padding-left: 1vw;
   cursor: pointer;
   font-family: "PT Sans Caption", sans-serif;
   text-decoration: none;
   color: black;
 }
+.handbook_main_container .info_section .list_of_items .item:hover {
+  transition: 300ms;
+  background-color: rgb(200, 200, 200);
+}
 .handbook_main_container .info_section .list_of_items .item .logo {
-  width: 3vw;
-  height: 3vw;
+  width: 4vw;
+  height: 4vw;
+  border: 1px black solid;
+  margin-right: 1vw;
 }
 .handbook_main_container .info_section h2 {
   color: black;

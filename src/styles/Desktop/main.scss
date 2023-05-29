@@ -56,8 +56,9 @@ body{
         }
         
         .submenu{
-            @include flex-container-column;
+            @include flex-container-row;
             justify-content: flex-start;
+            align-items: flex-start;
             display: none;
             position: absolute;
             width: 100vw;
@@ -65,17 +66,29 @@ body{
             background-color: $secondary_color;
             border-bottom: 2px black solid;
             filter: opacity(95%);
+            padding-top: 3vw;
+            padding-left: 3vw;
+            cursor: auto;
 
-            .submenu_button{
-                margin: {
-                    left: 8.5%;
-                    bottom: 5px;
-                    top: 5px;
-                };
-                color: white;
-                font-family: $main_font;
-                font-size: 1vw;
-                text-decoration: none;
+            ul{
+                @include flex-container-column;
+                @include center_horizontal_and_vertical;
+                margin-left: 2vw;
+
+                
+                li{
+                    @include flex-container-row;
+                    @include center_horizontal_and_vertical;
+                    border: 1px black solid;
+                    width: 10vw;
+                    cursor: pointer;
+                    margin: .2vw;
+
+                    &:hover{
+                        background-color: rgb(216, 216, 216);
+                        transition: 300ms;
+                    }
+                }
             }
         }
 

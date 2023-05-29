@@ -25,23 +25,30 @@
                 @include flex-container-row;
                 justify-content: flex-start;
                 align-items: center;
-                width: 15vw;
-                height: 8vh;
+                width: 30%;
+                height: 10vh;
                 margin: .5vw;
                 border: 1px black solid;
                 border-radius: 10px;
+                padding-left: 1vw;
                 cursor: pointer;
                 font-family: $main_font;
                 text-decoration: none;
                 color: black;
 
+                &:hover{
+                    transition: 300ms;
+                    background-color: rgb(200, 200, 200);
+                }
+
                 .logo{
-                    width: 3vw;
-                    height: 3vw;
+                    width: 4vw;
+                    height: 4vw;
+                    border: 1px black solid;
+                    margin-right: 1vw;
                 }
             }
         }
-
 
         h2{
             color: black;
