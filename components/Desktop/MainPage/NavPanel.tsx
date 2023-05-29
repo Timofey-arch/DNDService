@@ -14,8 +14,27 @@ export default function NavPanel(props: any){
 
                 <Link href='/' className="nav_button">
                     Для мастера
-                    <div className="submenu" 
-                        style={{ "left" : "calc(-5vw - 2.4vw)", "top": "10vh"}}>
+                    <div className="submenu" style={{ "left" : "calc(-5vw - 2.4vw)", "top": "10vh"}}>
+                        <ul>
+                            ЧТО НИБУДЬ
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                        </ul>
+
+                        <ul>
+                            ЧТО НИБУДЬ
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                        </ul>
+
+                        <ul>
+                            ЧТО НИБУДЬ
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                        </ul>
                     </div>
 
                     <div className="pointer"></div>

@@ -25,23 +25,30 @@
                 @include flex-container-row;
                 justify-content: flex-start;
                 align-items: center;
-                width: 15vw;
-                height: 8vh;
+                width: 30%;
+                height: 10vh;
                 margin: .5vw;
                 border: 1px black solid;
                 border-radius: 10px;
+                padding-left: 1vw;
                 cursor: pointer;
                 font-family: $main_font;
                 text-decoration: none;
                 color: black;
 
+                &:hover{
+                    transition: 300ms;
+                    background-color: rgb(200, 200, 200);
+                }
+
                 .logo{
-                    width: 3vw;
-                    height: 3vw;
+                    width: 4vw;
+                    height: 4vw;
+                    border: 1px black solid;
+                    margin-right: 1vw;
                 }
             }
         }
-
 
         h2{
             color: black;
@@ -68,5 +75,17 @@
 
     h1{
         font-family: $main_font;
+    }
+
+    img{
+        width: 10vw;
+        height: 10vw;
+        margin-bottom: 1vw;
+        border: {
+            left: 5px rgb(49, 49, 49) solid;
+            bottom: 5px rgb(49, 49, 49) solid;
+            top: 5px rgb(17, 17, 17) solid;
+            right: 5px rgb(17, 17, 17) solid;
+        };
     }
 }

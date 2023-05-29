@@ -55,8 +55,9 @@ body {
 }
 .nav_panel .nav_button .submenu {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
+  align-items: flex-start;
   display: none;
   position: absolute;
   width: 100vw;
@@ -64,15 +65,30 @@ body {
   background-color: white;
   border-bottom: 2px black solid;
   filter: opacity(95%);
+  padding-top: 3vw;
+  padding-left: 3vw;
+  cursor: auto;
 }
-.nav_panel .nav_button .submenu .submenu_button {
-  margin-left: 8.5%;
-  margin-bottom: 5px;
-  margin-top: 5px;
-  color: white;
-  font-family: "PT Sans Caption", sans-serif;
-  font-size: 1vw;
-  text-decoration: none;
+.nav_panel .nav_button .submenu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2vw;
+}
+.nav_panel .nav_button .submenu ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px black solid;
+  width: 10vw;
+  cursor: pointer;
+  margin: 0.2vw;
+}
+.nav_panel .nav_button .submenu ul li:hover {
+  background-color: rgb(216, 216, 216);
+  transition: 300ms;
 }
 .nav_panel .nav_button::before {
   content: "";
