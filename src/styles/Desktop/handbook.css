@@ -74,3 +74,12 @@
 .class_info_container h1, .race_info_container h1, .background_info_container h1 {
   font-family: "PT Sans Caption", sans-serif;
 }
+.class_info_container img, .race_info_container img, .background_info_container img {
+  width: 10vw;
+  height: 10vw;
+  margin-bottom: 1vw;
+  border-left: 5px rgb(49, 49, 49) solid;
+  border-bottom: 5px rgb(49, 49, 49) solid;
+  border-top: 5px rgb(17, 17, 17) solid;
+  border-right: 5px rgb(17, 17, 17) solid;
+}

@@ -76,4 +76,16 @@
     h1{
         font-family: $main_font;
     }
+
+    img{
+        width: 10vw;
+        height: 10vw;
+        margin-bottom: 1vw;
+        border: {
+            left: 5px rgb(49, 49, 49) solid;
+            bottom: 5px rgb(49, 49, 49) solid;
+            top: 5px rgb(17, 17, 17) solid;
+            right: 5px rgb(17, 17, 17) solid;
+        };
+    }
 }

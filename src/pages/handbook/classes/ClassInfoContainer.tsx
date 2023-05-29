@@ -2,6 +2,7 @@ export default function ClassInfoContainer({ p_class }){
     return(
         <div className="class_info_container">
             <h1>{p_class.name}</h1>
+            <img src={"http://127.0.0.1:8090/api/files/classes/"+p_class.id+"/" + p_class.field}></img>
             <div>
                 <b>Описание: </b> {p_class.description}
             </div>
