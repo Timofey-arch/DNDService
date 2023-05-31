@@ -8,13 +8,22 @@ export default function StatWindow(props: any){
         <div className="character_form" 
             style={{display: props.currentWindowNumber == props.windowNumber ? "flex" : "none"}}>
     
-            <h3>Выберите способ распределения навыков</h3>
+            <h3>Выберите способ распределения навыков {props.userData.characteristics.strength}
+                {props.userData.characteristics.physique}
+                {props.userData.characteristics.dexterity}
+                {props.userData.characteristics.intelligence}
+                {props.userData.characteristics.wisdom}
+                {props.userData.characteristics.charisma}
+                </h3>
             
             <p>Осталось очков навыков - {pointCount}</p>
 
             <section className="stats_field">
                 {["Сила", "Ловкость", "Выносливость", "Интеллект", "Мудрость", "Харизма"].map((statName) => {
-                    return <Stat statName={statName} pointCount={pointCount} setPointCount={setPoinCount}></Stat>
+                    return <Stat statName={statName}
+                                 pointCount={pointCount}
+                                 setPointCount={setPoinCount}
+                                 userData ={props.userData}></Stat>
                 })}
             </section>
 

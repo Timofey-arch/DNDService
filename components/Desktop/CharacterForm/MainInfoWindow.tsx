@@ -2,6 +2,7 @@ import InputField from "./InputField";
 import ComboBox from "./ComboBox";
 import Description from "./Description";
 import { useState } from "react";
+import {element} from "prop-types";
 
 export default function MainInfoWindow(props: any){
     const [race, setRace] = useState(props.races[0].name);
@@ -10,6 +11,10 @@ export default function MainInfoWindow(props: any){
     const [classDescription, setClassDescription] = useState(props.classes[0].description);
     const [background, setBackgrounds] = useState(props.backgrounds[0].name);
     const [backDescription, setBackDescription] = useState(props.backgrounds[0].description);
+    props.userData.userPlayerClass = playerClass
+    props.userData.userRace = race
+    props.userData.userBackground = background
+    props.userData.characteristics = props.userData.races.find((elem) => elem.name == race).statsToIncrease
     return(
         <div className="character_form" 
             style={{display: props.currentWindowNumber == props.windowNumber ? "flex" : "none"}}>

@@ -47,7 +47,7 @@ export default function HandbookMainPage(props){
                         return (<Link 
                                     className="item" href={`/handbook/backgrounds/${background.name}?id=${background.id}`}
                                 >
-                                    <Image className="logo" alt="Icon" src={Logo}></Image>
+                                <img className={"logo"} src={"http://127.0.0.1:8090/api/files/backgrounds/"+background.id+"/" + background.field}></img>
                                     {background.name}
                                 </Link>
                         )

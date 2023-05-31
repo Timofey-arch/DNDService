@@ -7,7 +7,23 @@ import StatWindow from "./StatWindow";
 
 export default function CharacterForm(props: any) {
     const [currentWindow, setCurrentWindow] = useState(1);
-    let userDataInput= {race: '', playerClass: '', background: ''};
+    let userDataInput = {
+        userRace: '',
+        userPlayerClass: '',
+        userBackground: '',
+        races: props.races,
+        playerClasses: props.classes,
+        backgrounds: props.backgrounds,
+        ability: '',
+        characteristics: {
+            strength: 0,
+            physique: 0,
+            dexterity: 0,
+            intelligence: 0,
+            wisdom: 0,
+            charisma: 0
+        }
+    };
 
     return (
         <div className="character_form_main_container">
@@ -18,7 +34,7 @@ export default function CharacterForm(props: any) {
                     classes={props.classes}
                     races={props.races}
                     backgrounds={props.backgrounds}
-                    userData = {userDataInput}
+                    userData={userDataInput}
                 >
                 </MainInfoWindow>
 
