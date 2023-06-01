@@ -1,5 +1,6 @@
 import Stat from "./Stat";
 import {useState} from "react";
+import Inventory from "./Inventory";
 
 export default function StatWindow(props: any) {
     const [pointCount, setPoinCount] = useState(30);
@@ -83,7 +84,13 @@ export default function StatWindow(props: any) {
                         - {(props.userData.characteristics.wisdom + (userClassSaveThrows?.includes("Мудрость") ? 2 : 0))}</div>
                     <div className="savethrow">Харизма
                         - {(props.userData.characteristics.charisma + (userClassSaveThrows?.includes("Харизма") ? 2 : 0))}</div>
+                    <div className="savethrows_container">
+                        <p>Инвентарь</p>
+                        <Inventory userData={props.userData}/>
+                    </div>
+
                 </div>
+
             </section>
         </div>
     );
