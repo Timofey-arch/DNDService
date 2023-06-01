@@ -6,7 +6,6 @@
 /.pnp
 .pnp.js
 /database/pb_data
-/database/pb_migrations
 
 # testing
 /coverage
