@@ -30,7 +30,7 @@ export default function MainInfoWindow(props: any){
                 setName={setPlayerClass} 
                 setDescription={setClassDescription}
                 label={"Класс"} 
-                name={"class"}> 
+                name={"p_class"}> 
             </ComboBox>
             <Description 
                 currentValue={playerClass} 
