@@ -5,19 +5,12 @@ import Inventory from "./Inventory";
 export default function StatWindow(props: any) {
     const [pointCount, setPoinCount] = useState(30);
     const userClassSaveThrows = props.userData.playerClasses.find((elem) => elem.name == props.userData.userPlayerClass).saveThrows?.getSavesThrows
-    console.log(userClassSaveThrows)
 
     return (
         <div className="character_form"
-             style={{display: props.currentWindowNumber == props.windowNumber ? "flex" : "none"}}>
+            style={{display: props.currentWindowNumber == props.windowNumber ? "flex" : "none"}}>
 
-            <h3>Выберите способ распределения навыков {props.userData.characteristics.strength}
-                {props.userData.characteristics.physique}
-                {props.userData.characteristics.dexterity}
-                {props.userData.characteristics.intelligence}
-                {props.userData.characteristics.wisdom}
-                {props.userData.characteristics.charisma}
-            </h3>
+            <h3>Выберите способ распределения навыков</h3>
 
             <p>Осталось очков навыков - {pointCount}</p>
 
@@ -26,7 +19,8 @@ export default function StatWindow(props: any) {
                     return <Stat statName={statName}
                                  pointCount={pointCount}
                                  setPointCount={setPoinCount}
-                                 userData={props.userData}></Stat>
+                                 userData={props.userData}
+                                 startStats={props.userData.startStats}></Stat>
                 })}
             </section>
 
@@ -34,39 +28,24 @@ export default function StatWindow(props: any) {
                 <div className="skills_container">
                     <p>Навыки</p>
 
-                    <div
-                        className="skill">Акробатика {Math.round((props.userData.characteristics.dexterity - 10) / 2)}</div>
-                    <div
-                        className="skill">Атлетика {Math.round((props.userData.characteristics.strength - 10) / 2)}</div>
+                    <div className="skill">Акробатика {Math.round((props.userData.characteristics.dexterity - 10) / 2)}</div>
+                    <div className="skill">Атлетика {Math.round((props.userData.characteristics.strength - 10) / 2)}</div>
                     <div className="skill">Внимание {Math.round((props.userData.characteristics.wisdom - 10) / 2)}</div>
-                    <div
-                        className="skill">Выживание {Math.round((props.userData.characteristics.wisdom - 10) / 2)}</div>
-                    <div
-                        className="skill">Дрессировка {Math.round((props.userData.characteristics.wisdom - 10) / 2)}</div>
-                    <div
-                        className="skill">Запугивание {Math.round((props.userData.characteristics.charisma - 10) / 2)}</div>
-                    <div
-                        className="skill">Исполнение {Math.round((props.userData.characteristics.charisma - 10) / 2)}</div>
-                    <div
-                        className="skill">История {Math.round((props.userData.characteristics.intelligence - 10) / 2)}</div>
-                    <div className="skill">Ловкость
-                        рук {Math.round((props.userData.characteristics.dexterity - 10) / 2)}</div>
-                    <div
-                        className="skill">Магия {Math.round((props.userData.characteristics.intelligence - 10) / 2)}</div>
+                    <div className="skill">Выживание {Math.round((props.userData.characteristics.wisdom - 10) / 2)}</div>
+                    <div className="skill">Дрессировка {Math.round((props.userData.characteristics.wisdom - 10) / 2)}</div>
+                    <div className="skill">Запугивание {Math.round((props.userData.characteristics.charisma - 10) / 2)}</div>
+                    <div className="skill">Исполнение {Math.round((props.userData.characteristics.charisma - 10) / 2)}</div>
+                    <div className="skill">История {Math.round((props.userData.characteristics.intelligence - 10) / 2)}</div>
+                    <div className="skill">Ловкость рук {Math.round((props.userData.characteristics.dexterity - 10) / 2)}</div>
+                    <div className="skill">Магия {Math.round((props.userData.characteristics.intelligence - 10) / 2)}</div>
                     <div className="skill">Медицина {Math.round((props.userData.characteristics.wisdom - 10) / 2)}</div>
                     <div className="skill">Обман {Math.round((props.userData.characteristics.charisma - 10) / 2)}</div>
-                    <div
-                        className="skill">Природа {Math.round((props.userData.characteristics.intelligence - 10) / 2)}</div>
-                    <div
-                        className="skill">Проницательность {Math.round((props.userData.characteristics.wisdom - 10) / 2)}</div>
-                    <div
-                        className="skill">Расследование {Math.round((props.userData.characteristics.intelligence - 10) / 2)}</div>
-                    <div
-                        className="skill">Религия {Math.round((props.userData.characteristics.intelligence - 10) / 2)}</div>
-                    <div
-                        className="skill">Скрытность {Math.round((props.userData.characteristics.dexterity - 10) / 2)}</div>
-                    <div
-                        className="skill">Убеждение {Math.round((props.userData.characteristics.charisma - 10) / 2)}</div>
+                    <div className="skill">Природа {Math.round((props.userData.characteristics.intelligence - 10) / 2)}</div>
+                    <div className="skill">Проницательность {Math.round((props.userData.characteristics.wisdom - 10) / 2)}</div>
+                    <div className="skill">Расследование {Math.round((props.userData.characteristics.intelligence - 10) / 2)}</div>
+                    <div className="skill">Религия {Math.round((props.userData.characteristics.intelligence - 10) / 2)}</div>
+                    <div className="skill">Скрытность {Math.round((props.userData.characteristics.dexterity - 10) / 2)}</div>
+                    <div className="skill">Убеждение {Math.round((props.userData.characteristics.charisma - 10) / 2)}</div>
                 </div>
 
                 <div className="savethrows_container">
@@ -88,9 +67,7 @@ export default function StatWindow(props: any) {
                         <p>Инвентарь</p>
                         <Inventory userData={props.userData}/>
                     </div>
-
                 </div>
-
             </section>
         </div>
     );

@@ -22,6 +22,14 @@ export default function CharacterForm(props: any) {
             intelligence: 0,
             wisdom: 0,
             charisma: 0
+        },
+        startStats: {
+            strength: 0,
+            physique: 0,
+            dexterity: 0,
+            intelligence: 0,
+            wisdom: 0,
+            charisma: 0
         }
     };
 

@@ -6,11 +6,34 @@ import React from 'react';
 
 
 export default function Stat(props: any) {
-    const [statValue, setStatValue] = useState(0);
+    const startPointCount = setStartPoint();
+    const [statValue, setStatValue] = useState(startPointCount);
+
+    function setStartPoint(){
+        switch (props.statName) {
+            case "Сила" :
+                const strength = props.startStats.strength
+                return strength
+            case "Ловкость":
+                return props.startStats.dexterity
+            case "Выносливость":
+                return props.startStats.physique
+            case "Интеллект":
+                return props.startStats.intelligence
+            case "Мудрость":
+                return props.startStats.wisdom
+            case "Харизма":
+                return props.startStats.charisma
+            default:
+                return 0
+        }
+    }
+
 
     function reduceCount(event: React.MouseEvent<HTMLElement>) {
         event.preventDefault();
-        if (statValue > 0) {
+        console.log(startPointCount);
+        if (statValue > startPointCount) {
             setStatValue(statValue - 1);
             props.setPointCount(props.pointCount + 1);
 
