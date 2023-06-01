@@ -1,6 +1,7 @@
 import NavPanel from 'components/Desktop/MainPage/NavPanel';
 import axios from "axios";
 import BackgroundInfoContainer from './BackgroundInfoContainer';
+import HandbookNavigation from 'components/Desktop/Handbook/HandbookNavigation';
 
 export default function Item({ item }){
 

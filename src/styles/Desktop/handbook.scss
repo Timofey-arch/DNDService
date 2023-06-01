@@ -5,9 +5,36 @@
     @include center_horizontal_and_vertical;
     position: relative;
     top: 11vh;
-    width: 50vw;
-    height: fit-content;
     padding: 1vw;
+
+    .nav_section{
+        @include flex-container-row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 70vw;
+        background-color: white;
+        margin: 1vw;
+        padding: 1vw;
+
+        .nav_element{
+            @include flex-container-row;
+            @include center_horizontal_and_vertical;
+            width: 15%;
+            border: 1px black solid;
+            height: 2vw;
+            margin: .5vw;
+            padding: .2vw;
+            font-family: $main_font;
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+
+            &:hover{
+                transition: 300ms;
+                background-color: rgb(200, 200, 200);
+            }
+        }
+    }
 
     .info_section{
         @include flex-container-column;

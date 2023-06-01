@@ -8,6 +8,7 @@ export default function HandbookMainPage(props){
 
     return(
         <div className="handbook_main_container">
+            {props.children}
             <section className="info_section">
                 <h2>Классы</h2>
                 <div className="list_of_items">{props.classes.map(
