@@ -214,31 +214,24 @@
             font-size: 1.2em;
         }
 
-        .skills_and_savethrows_container{
+        .info_container{
             @include flex-container-row;
             justify-content: space-between;
             margin-top: 2vh;
             width: 60%;
             
-            .skills_container, .savethrows_container{
+            .skills_container, .savethrows_container, .inventory{
                 width: 12vw;
                 height: fit-content;
     
-                .skill{
+                .skill, .savethrow, .item{
                     @include flex-container-row;
-                    justify-content: space-between;
                     align-items: center;
                     width: 100%;
-                    height: 3vh;
+                    height: fit-content;
                     border: 1px black solid;
                     font-family: $main_font;
-                }
-
-                .savethrow{
-                    width: 100%;
-                    height: 3vh;
-                    border: 1px black solid;
-                    font-family: $main_font;
+                    padding: .1vw;
                 }
 
                 :first-child{

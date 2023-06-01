@@ -188,34 +188,28 @@
   color: black;
   font-size: 1.2em;
 }
-.character_form_main_container .character_form .skills_and_savethrows_container {
+.character_form_main_container .character_form .info_container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-top: 2vh;
   width: 60%;
 }
-.character_form_main_container .character_form .skills_and_savethrows_container .skills_container, .character_form_main_container .character_form .skills_and_savethrows_container .savethrows_container {
+.character_form_main_container .character_form .info_container .skills_container, .character_form_main_container .character_form .info_container .savethrows_container, .character_form_main_container .character_form .info_container .inventory {
   width: 12vw;
   height: fit-content;
 }
-.character_form_main_container .character_form .skills_and_savethrows_container .skills_container .skill, .character_form_main_container .character_form .skills_and_savethrows_container .savethrows_container .skill {
+.character_form_main_container .character_form .info_container .skills_container .skill, .character_form_main_container .character_form .info_container .skills_container .savethrow, .character_form_main_container .character_form .info_container .skills_container .item, .character_form_main_container .character_form .info_container .savethrows_container .skill, .character_form_main_container .character_form .info_container .savethrows_container .savethrow, .character_form_main_container .character_form .info_container .savethrows_container .item, .character_form_main_container .character_form .info_container .inventory .skill, .character_form_main_container .character_form .info_container .inventory .savethrow, .character_form_main_container .character_form .info_container .inventory .item {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 3vh;
+  height: fit-content;
   border: 1px black solid;
   font-family: "PT Sans Caption", sans-serif;
+  padding: 0.1vw;
 }
-.character_form_main_container .character_form .skills_and_savethrows_container .skills_container .savethrow, .character_form_main_container .character_form .skills_and_savethrows_container .savethrows_container .savethrow {
-  width: 100%;
-  height: 3vh;
-  border: 1px black solid;
-  font-family: "PT Sans Caption", sans-serif;
-}
-.character_form_main_container .character_form .skills_and_savethrows_container .skills_container :first-child, .character_form_main_container .character_form .skills_and_savethrows_container .savethrows_container :first-child {
+.character_form_main_container .character_form .info_container .skills_container :first-child, .character_form_main_container .character_form .info_container .savethrows_container :first-child, .character_form_main_container .character_form .info_container .inventory :first-child {
   color: black;
   font-weight: bold;
   margin: 0;

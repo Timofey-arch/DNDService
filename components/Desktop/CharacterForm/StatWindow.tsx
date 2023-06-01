@@ -5,6 +5,7 @@ import Inventory from "./Inventory";
 export default function StatWindow(props: any) {
     const [pointCount, setPoinCount] = useState(30);
     const userClassSaveThrows = props.userData.playerClasses.find((elem) => elem.name == props.userData.userPlayerClass).saveThrows?.getSavesThrows
+    const items = props.userData.backgrounds.find((elem: any) => elem.name == props.userData.userBackground).equipment.getEquipment;
 
     return (
         <div className="character_form"
@@ -24,7 +25,7 @@ export default function StatWindow(props: any) {
                 })}
             </section>
 
-            <section className="skills_and_savethrows_container">
+            <section className="info_container">
                 <div className="skills_container">
                     <p>Навыки</p>
 
@@ -62,10 +63,13 @@ export default function StatWindow(props: any) {
                     <div className="savethrow">Мудрость
                         - {(props.userData.characteristics.wisdom + (userClassSaveThrows?.includes("Мудрость") ? 2 : 0))}</div>
                     <div className="savethrow">Харизма
-                        - {(props.userData.characteristics.charisma + (userClassSaveThrows?.includes("Харизма") ? 2 : 0))}</div>
-                    <div className="savethrows_container">
+                        - {(props.userData.characteristics.charisma + (userClassSaveThrows?.includes("Харизма") ? 2 : 0))}
+                    </div>
+
+                    <div className="inventory">
                         <p>Инвентарь</p>
-                        <Inventory userData={props.userData}/>
+
+                        {items?.map((elem, index) => <div key={index} className="item">{elem}</div>)}
                     </div>
                 </div>
             </section>
