@@ -11,10 +11,12 @@ export default function MainInfoWindow(props: any){
     const [classDescription, setClassDescription] = useState(props.classes[0].description);
     const [background, setBackgrounds] = useState(props.backgrounds[0].name);
     const [backDescription, setBackDescription] = useState(props.backgrounds[0].description);
-    props.userData.userPlayerClass = playerClass
-    props.userData.userRace = race
-    props.userData.userBackground = background
-    props.userData.characteristics = props.userData.races.find((elem: any) => elem.name == race).statsToIncrease
+    props.userData.userPlayerClass = playerClass;
+    props.userData.userRace = race;
+    props.userData.userBackground = background;
+    props.userData.characteristics = props.userData.races.find((elem: any) => elem.name == race).statsToIncrease;
+    props.userData.startStats = structuredClone(props.userData.races.find((elem: any) => elem.name == race).statsToIncrease);
+
     return(
         <div className="character_form" 
             style={{display: props.currentWindowNumber == props.windowNumber ? "flex" : "none"}}>
