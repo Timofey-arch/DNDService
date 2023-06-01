@@ -14,7 +14,7 @@ export default function MainSection(props: any){
                         <p>Создайте своего уникального персонажа и идите навстречу приключениям!</p>
                     </Link>
 
-                    <Link className="icon" href="/">
+                    <Link className="icon" href="/master_info">
                         <div className="picture"></div>
                         <h3>Мастерская</h3>
                         <p>Следить за игрой стало намного удобнее. Избавьте себя от рутинных действий!</p>
