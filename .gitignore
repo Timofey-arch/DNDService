@@ -5,7 +5,8 @@
 /.vscode
 /.pnp
 .pnp.js
-/database
+**/logs
+**/data
 
 # testing
 /coverage
@@ -14,7 +15,6 @@
 /.next/
 /out/
 /.vscode/
-/database/
 
 # production
 /build
