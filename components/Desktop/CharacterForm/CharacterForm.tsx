@@ -1,6 +1,7 @@
 import {use, useState} from "react";
 import Button from "./Button";
 import ButtonContainer from "./ButtonContainer";
+import CharacterWindow from "./CharacterWindow";
 import MainInfoWindow from "./MainInfoWindow";
 import StatWindow from "./StatWindow";
 
@@ -33,10 +34,9 @@ export default function CharacterForm(props: any) {
         }
     };
 
-
     return (
         <div className="character_form_main_container">
-            <form action="/api/create_character" method="POST">
+            <form action="/character_list">
                 <MainInfoWindow
                     currentWindowNumber={currentWindow}
                     windowNumber={1}
@@ -50,9 +50,15 @@ export default function CharacterForm(props: any) {
                 <StatWindow
                     currentWindowNumber={currentWindow}
                     windowNumber={2}
-                    userData={userDataInput}>
-                    classes={props.classes}
+                    userData={userDataInput}
+                    classes={props.classes}>
                 </StatWindow>
+
+                <CharacterWindow 
+                    userData={userDataInput} 
+                    currentWindowNumber={currentWindow}
+                    windowNumber={3}>    
+                </CharacterWindow>
             </form>
 
             <ButtonContainer>
