@@ -6,9 +6,36 @@
   align-items: center;
   position: relative;
   top: 11vh;
-  width: 50vw;
-  height: fit-content;
   padding: 1vw;
+}
+.handbook_main_container .nav_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 70vw;
+  background-color: white;
+  margin: 1vw;
+  padding: 1vw;
+}
+.handbook_main_container .nav_section .nav_element {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  border: 1px black solid;
+  height: 2vw;
+  margin: 0.5vw;
+  padding: 0.2vw;
+  font-family: "PT Sans Caption", sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+.handbook_main_container .nav_section .nav_element:hover {
+  transition: 300ms;
+  background-color: rgb(200, 200, 200);
 }
 .handbook_main_container .info_section {
   display: flex;

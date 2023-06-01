@@ -2,6 +2,7 @@ import NavPanel from "components/Desktop/MainPage/NavPanel";
 import React, { useEffect } from "react";
 import axios from "axios";
 import HandbookMainPage from "components/Desktop/Handbook/HandbookMainPage";
+import HandbookNavigation from "components/Desktop/Handbook/HandbookNavigation";
 
 export default function Handbook(props){
 
@@ -18,7 +19,9 @@ export default function Handbook(props){
                 classes={props.classes}
                 races={props.races}
                 backgrounds={props.backgrounds}
-            ></HandbookMainPage>
+            >
+                <HandbookNavigation></HandbookNavigation>
+            </HandbookMainPage>
         </>
     );
 }
