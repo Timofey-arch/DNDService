@@ -14,7 +14,7 @@ export default function MainInfoWindow(props: any){
     props.userData.userPlayerClass = playerClass
     props.userData.userRace = race
     props.userData.userBackground = background
-    props.userData.characteristics = props.userData.races.find((elem) => elem.name == race).statsToIncrease
+    props.userData.characteristics = props.userData.races.find((elem: any) => elem.name == race).statsToIncrease
     return(
         <div className="character_form" 
             style={{display: props.currentWindowNumber == props.windowNumber ? "flex" : "none"}}>
