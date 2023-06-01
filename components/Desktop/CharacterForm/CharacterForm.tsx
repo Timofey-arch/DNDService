@@ -25,6 +25,7 @@ export default function CharacterForm(props: any) {
         }
     };
 
+
     return (
         <div className="character_form_main_container">
             <form action="/api/create_character" method="POST">
@@ -42,6 +43,7 @@ export default function CharacterForm(props: any) {
                     currentWindowNumber={currentWindow}
                     windowNumber={2}
                     userData={userDataInput}>
+                    classes={props.classes}
                 </StatWindow>
             </form>
 
